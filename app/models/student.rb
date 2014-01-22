@@ -11,11 +11,10 @@ validates :email, :uniqueness => true
 validates_format_of :email,
    :with => /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/,
    :on => :create
-validate :age_check?
-
-# validates_format_of :phone,
-#    :with => /(?:\+?|\b)[0-9]{10}\b/,
-#    :on => :create
+validates_format_of :phone,
+   :with => /(\D*\d){10,}/,
+   :on => :create
+validates :age, :numericality => {:greater_than => 5}
 
 
   def name
