@@ -1,6 +1,7 @@
 require 'rspec'
 require_relative '../db/config'
 
+#IF YOU COMMENT OUT THE EMAIL IN THE MIGRATION, THESE TESTS STILL PASS.  WHYYYY???
 
 describe "create table with correct schema" do
   before(:all) do
