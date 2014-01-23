@@ -19,7 +19,7 @@ validates :age, :numericality => {:greater_than => 5}
   has_many :sections
   has_many :teachers, :through => :sections
 
-  def name
+  def full_name
     #"#{first_name} #{last_name}"
     first_name + " " + last_name
   end

@@ -45,4 +45,11 @@ require_relative 'assignment'
 # Section.create(student_id: 2, teacher_id: 7)
 
 #p Student.find_by(id: 1).teachers
-p Teacher.find_by(id: 2).students
+#p Teacher.find_by(id: 2).students
+
+students = Student.all
+
+students.each do |student|
+  student.name = student.full_name
+  student.save
+end
