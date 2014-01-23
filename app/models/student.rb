@@ -15,7 +15,9 @@ validates_format_of :phone,
    :with => /(\D*\d){10,}/,
    :on => :create
 validates :age, :numericality => {:greater_than => 5}
-
+  
+  has_many :sections
+  has_many :teachers, :through => :sections
 
   def name
     #"#{first_name} #{last_name}"
